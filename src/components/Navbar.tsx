@@ -21,7 +21,6 @@ import {
 const navItems = [
   { key: 'home', href: navRoutes.home },
   { key: 'about', href: navRoutes.about },
-  { key: 'howItWorks', href: navRoutes.howItWorks },
   { key: 'participate', href: navRoutes.participate },
   { key: 'resources', href: navRoutes.resources },
   { key: 'news', href: navRoutes.news },

@@ -3,7 +3,6 @@
 export const navRoutes = {
   home: '/',
   about: '/about',
-  howItWorks: '/how-it-works',
   participate: '/participate',
   resources: '/resources',
   research: '/research',

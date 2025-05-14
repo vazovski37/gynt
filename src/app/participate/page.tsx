@@ -1,5 +1,5 @@
-import ComingSoon from '@/components/ComingSoon'
+import ParticipatePage from '@/features/participate'
 
-export default function ParticipatePage() {
-  return <ComingSoon />
+export default function Participate() {
+  return <ParticipatePage />
 }

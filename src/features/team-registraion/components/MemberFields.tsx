@@ -3,7 +3,7 @@ import { Input } from '@/components/ui/input'
 
 export default function MemberFields({ index, control, t }: any) {
   return (
-    <>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <FormField control={control} name={`team_members.${index}.name`} render={({ field }) => (
         <FormItem>
           <FormLabel>{t('name')}</FormLabel>
@@ -49,6 +49,6 @@ export default function MemberFields({ index, control, t }: any) {
           <FormMessage />
         </FormItem>
       )} />
-    </>
+    </div>
   )
 }

@@ -7,6 +7,51 @@
   },
   "about": {
     "title": "What is GYNT?",
-    "text": "The Georgian Young Naturalists’ Tournament is a science competition that encourages critical thinking, teamwork, and scientific communication for Georgian youth."
+    "text": "GYNT is Georgia’s first student-led science tournament that blends research, teamwork, and scientific debate. Inspired by international formats like IYNT, GYNT brings Georgian students together to present creative solutions to real-world science problems."
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "step1": {
+      "title": "Form a Team",
+      "desc": "Gather 6 passionate students and a teacher-mentor."
+    },
+    "step2": {
+      "title": "Tackle Science Problems",
+      "desc": "Work on open-ended research questions and prepare your defense."
+    },
+    "step3": {
+      "title": "Compete in GYNT",
+      "desc": "Present, challenge, and debate other teams in front of expert jurors."
+    }
+  },
+  "whyJoin": {
+    "title": "Why Join GYNT?",
+    "research": "Scientific Research",
+    "researchDesc": "Learn how to research like a real scientist.",
+    "speaking": "Public Speaking & Debating",
+    "speakingDesc": "Debate ideas with other brilliant students.",
+    "recognition": "National & International Recognition",
+    "recognitionDesc": "Represent Georgia and gain visibility.",
+    "teamwork": "Teamwork & Leadership",
+    "teamworkDesc": "Develop leadership while collaborating in teams.",
+    "cta": "Join as a Participant"
+  },
+"timeline": {
+  "title": "Timeline",
+  "registration": "Registration Opens",
+  "problems": "Problems Released",
+  "research": "Research Phase",
+  "tournament": "Tournament Day",
+  "announcement": "Winners Announced",
+  "dates": {
+    "registration": "October",
+    "problems": "November",
+    "research": "November – February",
+    "tournament": "March",
+    "announcement": "End of March"
   }
+}
+
+
+
 }

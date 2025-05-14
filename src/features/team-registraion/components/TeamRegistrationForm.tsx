@@ -53,10 +53,10 @@ export default function TeamRegistrationForm() {
       team_name: '',
       school_name: '',
       city: '',
-      team_leader_name: '',
-      team_leader_phone: '',
-      team_leader_email: '',
       team_members: [
+        { name: '', surname: '', date_of_birth: '', class: '' },
+        { name: '', surname: '', date_of_birth: '', class: '' },
+        { name: '', surname: '', date_of_birth: '', class: '' },
         { name: '', surname: '', date_of_birth: '', class: '' },
         { name: '', surname: '', date_of_birth: '', class: '' },
         { name: '', surname: '', date_of_birth: '', class: '' },
@@ -93,9 +93,9 @@ export default function TeamRegistrationForm() {
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <TeamInfoFields control={form.control} t={t} />
-            <LeaderFields control={form.control} t={t} />
-            <MemberFieldsGroup fields={fields} control={form.control} t={t} />
+            {/* <LeaderFields control={form.control} t={t} /> */}
             <SupervisorFields control={form.control} t={t} />
+            <MemberFieldsGroup fields={fields} control={form.control} t={t} />
             <AdditionalInfoField control={form.control} t={t} />
 
             <div className="sm:col-span-2">

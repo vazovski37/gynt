@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Participate in GYNT 2025",
+    "subtitle": "Join the Georgian Young Naturalists’ Tournament and represent your school in an inspiring scientific challenge.",
+    "button": "Register Your Team"
+  },
+  "whoCan": {
+    "title": "Who Can Participate?",
+    "rules": [
+      "Students under 17 years old (as of January 1, 2026)",
+      "Must be enrolled in a public or private school in Georgia",
+      "Each school may register 1 team of 6 students",
+      "Each team must have 1–2 team leaders and a team captain"
+    ]
+  },
+  "format": {
+    "title": "Tournament Format",
+    "prep": "Preparation Phase",
+    "prepDesc": "Now – May 9, 2025\nTeams prepare solutions to 17 science problems with guidance from mentors.",
+    "fight": "Competition Phase",
+    "fightDesc": "May 10–12, 2025\nTeams compete in Science Fights with roles like Presenter, Opponent, Reviewer."
+  },
+  "dates": {
+    "title": "Important Dates",
+    "list": [
+      { "date": "April 25, 2025", "event": "Registration deadline" },
+      { "date": "May 10–12, 2025", "event": "GYNT 2025 Tournament (TBD location)" },
+      { "date": "May 13, 2025", "event": "Award ceremony and national team selection" }
+    ]
+  },
+  "register": {
+    "title": "Ready to Register?",
+    "desc": "Submit your team using the official registration form.",
+    "button": "Registration Form"
+  },
+  "contact": {
+    "title": "Contact",
+    "teimuraz": "Teimuraz Gachechiladze",
+    "giorgi": "Giorgi Bakhtadze"
+  },
+  "faq": {
+    "title": "FAQ",
+    "q1": "Can students from different schools form a team?",
+    "a1": "No, all team members must be from the same school.",
+    "q2": "What is the age cut-off?",
+    "a2": "Participants must be younger than 17 on January 1, 2026.",
+    "q3": "Is participation free?",
+    "a3": "Yes, there is no participation fee."
+  }
+}
