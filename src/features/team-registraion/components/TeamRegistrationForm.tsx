@@ -1,22 +1,22 @@
 'use client'
 
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
+  Form
 } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Textarea } from '@/components/ui/textarea'
-import { useForm } from 'react-hook-form'
+import { useForm, useFieldArray } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTeamRegistration } from '../hooks/useTeamRegistration'
 import { useTranslation } from 'react-i18next'
+
+// Modular components
+import TeamInfoFields from './TeamInfoFields'
+import LeaderFields from './LeaderFields'
+import SupervisorFields from './SupervisorFields'
+import AdditionalInfoField from './AdditionalInfoField'
+import MemberFieldsGroup from './MemberFieldsGroup'
 
 const formSchema = z.object({
   team_name: z.string().min(1),
@@ -25,7 +25,16 @@ const formSchema = z.object({
   team_leader_name: z.string().min(1),
   team_leader_phone: z.string(),
   team_leader_email: z.string().email(),
-  team_members: z.array(z.object({ name: z.string() })),
+  team_members: z.array(
+    z.object({
+      name: z.string().min(1),
+      surname: z.string().min(1),
+      date_of_birth: z
+        .string()
+        .regex(/^\d{2}\/\d{2}\/\d{4}$/, 'Use dd/mm/yyyy format'),
+      class: z.string().min(1),
+    })
+  ),
   team_supervisor: z.string(),
   supervisor_phone: z.string(),
   supervisor_email: z.string().email(),
@@ -47,7 +56,11 @@ export default function TeamRegistrationForm() {
       team_leader_name: '',
       team_leader_phone: '',
       team_leader_email: '',
-      team_members: [{ name: '' }, { name: '' }, { name: '' }],
+      team_members: [
+        { name: '', surname: '', date_of_birth: '', class: '' },
+        { name: '', surname: '', date_of_birth: '', class: '' },
+        { name: '', surname: '', date_of_birth: '', class: '' },
+      ],
       team_supervisor: '',
       supervisor_phone: '',
       supervisor_email: '',
@@ -55,174 +68,37 @@ export default function TeamRegistrationForm() {
     },
   })
 
+  const { fields } = useFieldArray({
+    control: form.control,
+    name: 'team_members',
+  })
+
   const onSubmit = async (data: FormValues) => {
-    await registerTeam(data)
+    const formattedData = {
+      ...data,
+      team_members: data.team_members.map((member) => {
+        const [day, month, year] = member.date_of_birth.split('/')
+        const isoDate = new Date(`${year}-${month}-${day}`).toISOString().split('T')[0]
+        return { ...member, date_of_birth: isoDate }
+      }),
+    }
+
+    await registerTeam(formattedData)
   }
 
   return (
-    <Card className="max-w-4xl mx-auto mt-8 p-8 shadow-lg">
-      <CardContent>
+    <Card className="max-w-4xl mx-auto mt-8 p-2 sm:p-2 shadow-lg">
+      <CardContent className="px-2 lg:px-6">
         <h2 className="text-2xl font-semibold mb-6 text-center">{t('title')}</h2>
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <FormField
-              control={form.control}
-              name="team_name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('team_name')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('team_name')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <TeamInfoFields control={form.control} t={t} />
+            <LeaderFields control={form.control} t={t} />
+            <MemberFieldsGroup fields={fields} control={form.control} t={t} />
+            <SupervisorFields control={form.control} t={t} />
+            <AdditionalInfoField control={form.control} t={t} />
 
-            <FormField
-              control={form.control}
-              name="school_name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('school_name')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('school_name')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="city"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('city')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('city')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="team_leader_name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('team_leader_name')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('team_leader_name')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="team_leader_phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('team_leader_phone')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('team_leader_phone')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="team_leader_email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('team_leader_email')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('team_leader_email')} type="email" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {form.watch('team_members').map((_, index) => (
-              <FormField
-                key={index}
-                control={form.control}
-                name={`team_members.${index}.name`}
-                render={({ field }) => (
-                  <FormItem className="col-span-1 md:col-span-2">
-                    <FormLabel>{t('member', { number: index + 1 })}</FormLabel>
-                    <FormControl>
-                      <Input {...field} placeholder={t('member_placeholder', { number: index + 1 })} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            ))}
-
-            <FormField
-              control={form.control}
-              name="team_supervisor"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('team_supervisor')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('team_supervisor')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="supervisor_phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('supervisor_phone')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('supervisor_phone')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="supervisor_email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('supervisor_email')}</FormLabel>
-                  <FormControl>
-                    <Input {...field} placeholder={t('supervisor_email')} type="email" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name="additional_info"
-              render={({ field }) => (
-                <FormItem className="col-span-1 md:col-span-2">
-                  <FormLabel>{t('additional_info')}</FormLabel>
-                  <FormControl>
-                    <Textarea {...field} placeholder={t('additional_info_placeholder')} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <div className="col-span-1 md:col-span-2">
+            <div className="sm:col-span-2">
               <Button type="submit" className="w-full" disabled={loading}>
                 {loading ? t('submitting') : t('submit')}
               </Button>

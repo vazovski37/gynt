@@ -11,6 +11,8 @@ import enNavbar from "./languages/en/navbar.json";
 import geNavbar from "./languages/ge/navbar.json";
 import enTeamRegistration from './languages/en/teamRegistration.json'
 import geTeamRegistration from './languages/ge/teamRegistration.json'
+import enCommon from "./languages/en/common.json"
+import geCommon from "./languages/ge/common.json"
 
 // Safe language fallback (default to 'ge')
 const savedLang = typeof window !== 'undefined' ? localStorage.getItem("la") || "ge" : "ge";
@@ -23,16 +25,18 @@ i18n
         landing: enLanding,
         navbar: enNavbar,
         teamRegistration: enTeamRegistration,
+        common:enCommon
       },
       ge: {
         landing: geLanding,
         navbar: geNavbar,
         teamRegistration: geTeamRegistration,
+        common: geCommon,
       },
     },
     lng: savedLang,
     fallbackLng: "ge",
-    ns: ["landing", "navbar", "teamRegistration"],
+    ns: ["landing", "navbar", "teamRegistration", "common"],
     defaultNS: "landing",
     interpolation: {
       escapeValue: false,

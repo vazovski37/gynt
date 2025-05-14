@@ -1,10 +1,14 @@
 {
   "home": "მთავარი",
-  "about": "შესახებ",
+  "about": "ჩვენ შესახებ",
   "howItWorks": "როგორ მუშაობს",
   "participate": "მონაწილეობა",
   "tournaments": "ტურნირები",
-  "news": "ახალი ამბები",
-  "sponsors": "სპონსორები",
-  "contact": "კონტაქტი"
+  "resources": "რესურსები",
+  "research": "კვლევები",
+  "news": "სიახლეები",
+  "support": "მხარდაჭერა",
+  "contact": "კონტაქტი",
+  "teamRegistration": "დარეგისტრირე გუნდი",
+  "juryRegistration": "დარეგისტრირდი ჟიურის წევრად"
 }

@@ -1,10 +1,14 @@
 {
   "home": "Home",
   "about": "About",
-  "howItWorks": "How it Works",
+  "howItWorks": "How It Works",
   "participate": "Participate",
   "tournaments": "Tournaments",
+  "resources": "Resources",
+  "research": "Research",
   "news": "News",
-  "sponsors": "Sponsors",
-  "contact": "Contact"
+  "support": "Support",
+  "contact": "Contact",
+  "teamRegistration": "Register Team",
+  "juryRegistration": "Register Jury"
 }

@@ -1,6 +1,10 @@
 export interface TeamMember {
   name: string;
+  surname: string;
+  date_of_birth: string;
+  class: string;
 }
+
 
 export interface TeamRegistrationPayload {
   team_name: string;
