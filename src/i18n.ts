@@ -1,4 +1,7 @@
+'use client'
+
 // src/i18n.ts
+
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
@@ -9,24 +12,25 @@ import geNavbar from "./languages/ge/navbar.json";
 import enTeamRegistration from './languages/en/teamRegistration.json'
 import geTeamRegistration from './languages/ge/teamRegistration.json'
 
-const savedLang = localStorage.getItem("la") || "ge";
+// Safe language fallback (default to 'ge')
+const savedLang = typeof window !== 'undefined' ? localStorage.getItem("la") || "ge" : "ge";
 
 i18n
   .use(initReactI18next)
   .init({
-  resources: {
-    en: {
-      landing: enLanding,
-      navbar: enNavbar,
-      teamRegistration: enTeamRegistration
+    resources: {
+      en: {
+        landing: enLanding,
+        navbar: enNavbar,
+        teamRegistration: enTeamRegistration,
+      },
+      ge: {
+        landing: geLanding,
+        navbar: geNavbar,
+        teamRegistration: geTeamRegistration,
+      },
     },
-    ge: {
-      landing: geLanding,
-      navbar: geNavbar,
-      teamRegistration: geTeamRegistration
-    }
-  },
-    lng: savedLang, // Use saved language
+    lng: savedLang,
     fallbackLng: "ge",
     ns: ["landing", "navbar", "teamRegistration"],
     defaultNS: "landing",
