@@ -1,0 +1,20 @@
+{
+  "title": "Team Registration",
+  "team_name": "Team Name",
+  "school_name": "School Name",
+  "city": "City",
+  "team_leader_name": "Team Leader Name",
+  "team_leader_phone": "Team Leader Phone",
+  "team_leader_email": "Team Leader Email",
+  "member": "Member {{number}}",
+  "member_placeholder": "Member {{number}} Name",
+  "team_supervisor": "Supervisor Name",
+  "supervisor_phone": "Supervisor Phone",
+  "supervisor_email": "Supervisor Email",
+  "additional_info": "Additional Info",
+  "additional_info_placeholder": "Any additional info...",
+  "submit": "Submit",
+  "submitting": "Submitting...",
+  "success": "Team registered successfully ✅",
+  "error": "❌ {{message}}"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "გუნდების რეგისტრაცია",
+  "team_name": "გუნდის სახელი",
+  "school_name": "სკოლის სახელი",
+  "city": "ქალაქი",
+  "team_leader_name": "გუნდის ლიდერის სახელი",
+  "team_leader_phone": "ლიდერის ტელეფონი",
+  "team_leader_email": "ლიდერის ელფოსტა",
+  "member": "წევრი {{number}}",
+  "member_placeholder": "წევრი {{number}} - სახელი",
+  "team_supervisor": "მენტორის სახელი",
+  "supervisor_phone": "მენტორის ტელეფონი",
+  "supervisor_email": "მენტორის ელფოსტა",
+  "additional_info": "დამატებითი ინფორმაცია",
+  "additional_info_placeholder": "დამატებითი ინფორმაცია...",
+  "submit": "გაგზავნა",
+  "submitting": "იგზავნება...",
+  "success": "გუნდი წარმატებით დარეგისტრირდა ✅",
+  "error": "❌ {{message}}"
+}
