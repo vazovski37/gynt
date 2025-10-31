@@ -6,10 +6,12 @@ export const navRoutes = {
   participate: '/participate',
   resources: '/resources',
   research: '/research',
+  researches: '/researches',
   news: '/news',
   support: '/support',
   contact: '/contact',
   teamRegistration: '/team-registration',
+  schoolRegistration: '/school-registration',
   juryRegistration: '/jury-registration',
   tournaments: '/tournaments'
 }

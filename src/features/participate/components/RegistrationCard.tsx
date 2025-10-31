@@ -14,7 +14,7 @@ export default function RegistrationCard() {
         <h3 className="text-xl font-semibold text-primary mb-3">{t('register.title')}</h3>
         <p className="text-sm text-muted-foreground mb-4">{t('register.desc')}</p>
         <Button asChild>
-          <Link href={navRoutes.teamRegistration}>{t('register.button')}</Link>
+          <Link href={navRoutes.schoolRegistration}>{t('register.button')}</Link>
         </Button>
       </div>
     </section>

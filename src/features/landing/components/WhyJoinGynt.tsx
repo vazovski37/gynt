@@ -5,15 +5,17 @@ import {
   Microscope,
   UsersRound,
   MessageSquare,
-  Globe2,
+  Trophy,
+  ArrowRight,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { navRoutes } from '@/constants/navRoutes'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export function WhyJoinGynt() {
   const { t } = useTranslation('landing')
+  const router = useRouter()
 
   const items = [
     {
@@ -27,7 +29,7 @@ export function WhyJoinGynt() {
       descKey: 'whyJoin.speakingDesc',
     },
     {
-      icon: Globe2,
+      icon: Trophy,
       titleKey: 'whyJoin.recognition',
       descKey: 'whyJoin.recognitionDesc',
     },
@@ -39,27 +41,32 @@ export function WhyJoinGynt() {
   ]
 
   return (
-    <section className="py-20 text-center ">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-primary mb-12">
+    <section className="py-24 text-center relative">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
           {t('whyJoin.title')}
         </h2>
+        <p className="text-lg text-muted-foreground mb-16 max-w-2xl mx-auto">
+          {t('whyJoin.subtitle')}
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           {items.map((item, idx) => {
             const Icon = item.icon
             return (
               <Card
                 key={idx}
-                className="h-full bg-background transition-shadow hover:shadow-2xl"
+                className="h-full bg-background border-2 hover:border-primary transition-all hover:shadow-xl hover:-translate-y-1"
               >
-                <CardHeader className="flex flex-col items-center text-center">
-                  <Icon className="w-10 h-10 text-primary mb-3" />
-                  <CardTitle className="text-lg font-semibold">
+                <CardHeader className="flex flex-col items-center text-center pb-4">
+                  <div className="p-3 rounded-full bg-primary/10 mb-4">
+                    <Icon className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-xl font-bold">
                     {t(item.titleKey)}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="text-sm text-muted-foreground px-4 pb-6">
+                <CardContent className="text-base text-muted-foreground px-6 pb-6">
                   {t(item.descKey)}
                 </CardContent>
               </Card>
@@ -67,8 +74,13 @@ export function WhyJoinGynt() {
           })}
         </div>
 
-        <Button asChild className="px-6 py-3 rounded-xl shadow-lg">
-          <Link href={navRoutes.participate}>{t('whyJoin.cta')}</Link>
+        <Button
+          size="lg"
+          className="px-8 py-6 text-lg shadow-xl hover:shadow-2xl group"
+          onClick={() => router.push(navRoutes.teamRegistration)}
+        >
+          {t('whyJoin.cta')}
+          <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </Button>
       </div>
     </section>

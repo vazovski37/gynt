@@ -1,0 +1,27 @@
+{
+  "title": "School Registration",
+  "subtitle": "Register your school to participate in GYNT",
+  "schoolInfo": "School Information",
+  "schoolName": "School Name",
+  "schoolNamePlaceholder": "Enter school name",
+  "city": "City",
+  "cityPlaceholder": "City",
+  "schoolType": "School Type",
+  "schoolTypePlaceholder": "Public/Private",
+  "address": "Address",
+  "addressPlaceholder": "School address",
+  "contactInfo": "Contact Information",
+  "contactPerson": "Contact Person",
+  "contactPersonPlaceholder": "Full name",
+  "contactPhone": "Phone",
+  "contactPhonePlaceholder": "+995 XX XXX XXXX",
+  "contactEmail": "Email",
+  "contactEmailPlaceholder": "example@school.ge",
+  "additionalInfo": "Additional Information",
+  "additionalInfoPlaceholder": "Any additional information...",
+  "submit": "Register School",
+  "submitting": "Submitting...",
+  "success": "School registered successfully! ✅",
+  "error": "❌ {{message}}"
+}
+

@@ -3,5 +3,34 @@
     "title": "Coming Soon",
     "subtitle": "This page is currently under development. We're working hard to bring you something great!",
     "home": "Go to Home"
+  },
+  "researches": {
+    "title": "Research Projects",
+    "subtitle": "Explore groundbreaking research conducted by GYNT participants. Discover innovative solutions and scientific discoveries.",
+    "loading": "Loading researches...",
+    "error": "Failed to load researches.",
+    "notFound": "Research not found",
+    "back": "Back to Researches",
+    "tags": "Tags",
+    "abstract": "Abstract",
+    "content": "Content",
+    "methodology": "Methodology",
+    "results": "Results",
+    "conclusions": "Conclusions",
+    "files": "Related Files",
+    "searchPlaceholder": "Search by title, author, field, or tags...",
+    "totalResults": "research projects",
+    "filteredResults": "results",
+    "of": "of",
+    "noResults": "No results found",
+    "noResultsDesc": "Try adjusting your search terms or filters to find what you're looking for.",
+    "clearSearch": "Clear search"
+  },
+  "schools": {
+    "title": "Participating Schools",
+    "loading": "Loading participating schools...",
+    "noSchools": "No registered schools yet",
+    "noSchoolsDesc": "Be the first to register your school for GYNT!",
+    "count": "{{count}} schools participating"
   }
 }

@@ -1,9 +1,32 @@
 {
   "hero": {
-    "title": "Georgian Young Naturalists’ Tournament (GYNT)",
-    "subtitle": "Empowering the next generation of Georgian scientists.",
-    "register": "Register Now",
-    "learnMore": "Learn More"
+    "prefix": "GYNT, your",
+    "badge": "success",
+    "titleLine1": "Compete. Research. Excel.",
+    "titleLine2": "The Ultimate Science Tournament",
+    "subtitle": "The ultimate science tournament where Georgian students become scientists.",
+    "hook": "Join 500+ students solving real-world problems through research, debate, and innovation.",
+    "register": "Register Your Team",
+    "howItWorks": "See How It Works",
+    "feature1": "Real Research",
+    "feature2": "Scientific Debate",
+    "feature3": "National Recognition",
+    "stat1": {
+      "value": "500+",
+      "label": "Students"
+    },
+    "stat2": {
+      "value": "1st",
+      "label": "Tournament"
+    },
+    "stat3": {
+      "value": "6",
+      "label": "Team Members"
+    },
+    "stat4": {
+      "value": "2024",
+      "label": "Season"
+    }
   },
   "about": {
     "title": "What is GYNT?",
@@ -26,32 +49,33 @@
   },
   "whyJoin": {
     "title": "Why Join GYNT?",
-    "research": "Scientific Research",
-    "researchDesc": "Learn how to research like a real scientist.",
-    "speaking": "Public Speaking & Debating",
-    "speakingDesc": "Debate ideas with other brilliant students.",
-    "recognition": "National & International Recognition",
-    "recognitionDesc": "Represent Georgia and gain visibility.",
-    "teamwork": "Teamwork & Leadership",
-    "teamworkDesc": "Develop leadership while collaborating in teams.",
-    "cta": "Join as a Participant"
+    "subtitle": "Everything you need to start your scientific journey.",
+    "research": "Real Science",
+    "researchDesc": "Solve actual problems. Present real solutions.",
+    "speaking": "Debate & Compete",
+    "speakingDesc": "Challenge other teams. Defend your research.",
+    "recognition": "Stand Out",
+    "recognitionDesc": "Get recognized. Build your scientific profile.",
+    "teamwork": "Lead Teams",
+    "teamworkDesc": "6 students. One mission. Unlimited potential.",
+    "cta": "Join Now"
   },
-"timeline": {
-  "title": "Timeline",
-  "registration": "Registration Opens",
-  "problems": "Problems Released",
-  "research": "Research Phase",
-  "tournament": "Tournament Day",
-  "announcement": "Winners Announced",
-  "dates": {
-    "registration": "October",
-    "problems": "November",
-    "research": "November – February",
-    "tournament": "March",
-    "announcement": "End of March"
+  "timeline": {
+    "title": "Timeline",
+    "registration": "Registration Opens",
+    "problems": "Problems Released",
+    "research": "Research Phase",
+    "tournament": "Tournament Day",
+    "announcement": "Winners Announced",
+    "dates": {
+      "registration": "October",
+      "problems": "November",
+      "research": "November – February",
+      "tournament": "March",
+      "announcement": "End of March"
+    }
+  },
+  "sponsors": {
+    "title": "Partners & Sponsors"
   }
-}
-
-
-
 }

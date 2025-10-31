@@ -2,9 +2,11 @@
 
 import { useTournaments, TournamentList } from '@/features/tournaments'
 import { Separator } from '@/components/ui/separator'
+import { useLanguage } from '@/lib/language-context' // Import the useLanguage hook
 
 export default function TournamentsPage() {
-  const { tournaments, loading, error } = useTournaments()
+  const { language } = useLanguage() // Get the current language from the context
+  const { tournaments, loading, error } = useTournaments(language) // Pass the language to the hook
 
   return (
     <section className="max-w-5xl mx-auto px-6 py-16">

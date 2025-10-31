@@ -1,0 +1,27 @@
+{
+  "title": "სკოლის რეგისტრაცია",
+  "subtitle": "დარეგისტრირდით თქვენი სკოლა GYNT-ში მონაწილეობისთვის",
+  "schoolInfo": "სკოლის ინფორმაცია",
+  "schoolName": "სკოლის სახელი",
+  "schoolNamePlaceholder": "შეიყვანეთ სკოლის სახელი",
+  "city": "ქალაქი",
+  "cityPlaceholder": "ქალაქი",
+  "schoolType": "სკოლის ტიპი",
+  "schoolTypePlaceholder": "საჯარო/კერძო",
+  "address": "მისამართი",
+  "addressPlaceholder": "სკოლის მისამართი",
+  "contactInfo": "საკონტაქტო ინფორმაცია",
+  "contactPerson": "საკონტაქტო პირი",
+  "contactPersonPlaceholder": "სრული სახელი",
+  "contactPhone": "ტელეფონი",
+  "contactPhonePlaceholder": "+995 XX XXX XXXX",
+  "contactEmail": "ელფოსტა",
+  "contactEmailPlaceholder": "example@school.ge",
+  "additionalInfo": "დამატებითი ინფორმაცია",
+  "additionalInfoPlaceholder": "ნებისმიერი დამატებითი ინფორმაცია...",
+  "submit": "სკოლის რეგისტრაცია",
+  "submitting": "გადაგზავნა...",
+  "success": "სკოლა წარმატებით დარეგისტრირდა! ✅",
+  "error": "❌ {{message}}"
+}
+

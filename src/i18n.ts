@@ -11,6 +11,8 @@ import enNavbar from "./languages/en/navbar.json"
 import geNavbar from "./languages/ge/navbar.json"
 import enTeamRegistration from "./languages/en/teamRegistration.json"
 import geTeamRegistration from "./languages/ge/teamRegistration.json"
+import enSchoolRegistration from "./languages/en/schoolRegistration.json"
+import geSchoolRegistration from "./languages/ge/schoolRegistration.json"
 import enCommon from "./languages/en/common.json"
 import geCommon from "./languages/ge/common.json"
 import enParticipate from "./languages/en/participate.json"
@@ -27,6 +29,7 @@ i18n
         landing: enLanding,
         navbar: enNavbar,
         teamRegistration: enTeamRegistration,
+        schoolRegistration: enSchoolRegistration,
         participate: enParticipate,
         common: enCommon,
       },
@@ -34,13 +37,14 @@ i18n
         landing: geLanding,
         navbar: geNavbar,
         teamRegistration: geTeamRegistration,
+        schoolRegistration: geSchoolRegistration,
         participate: geParticipate,
         common: geCommon,
       },
     },
     lng: savedLang,
     fallbackLng: "ge",
-    ns: ["landing", "navbar", "teamRegistration", "participate", "common"],
+    ns: ["landing", "navbar", "teamRegistration", "schoolRegistration", "participate", "common"],
     defaultNS: "landing",
     interpolation: {
       escapeValue: false,

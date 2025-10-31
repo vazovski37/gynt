@@ -1,8 +1,10 @@
 {
   "hero": {
     "title": "Participate in GYNT 2025",
-    "subtitle": "Join the Georgian Young Naturalists’ Tournament and represent your school in an inspiring scientific challenge.",
-    "button": "Register Your Team"
+    "subtitle": "Join the Georgian Young Naturalists' Tournament and represent your school in an inspiring scientific challenge.",
+    "button": "Register Your School",
+    "badge": "Registration Open",
+    "viewSchools": "View Participating Schools"
   },
   "whoCan": {
     "title": "Who Can Participate?",
@@ -30,8 +32,8 @@
   },
   "register": {
     "title": "Ready to Register?",
-    "desc": "Submit your team using the official registration form.",
-    "button": "Registration Form"
+    "desc": "Submit your school using the official registration form.",
+    "button": "Register Your School"
   },
   "contact": {
     "title": "Contact",
