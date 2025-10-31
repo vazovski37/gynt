@@ -10,7 +10,7 @@ export const HeroGlow = () => {
 
   const backgroundImage = useTransform(
     [opacity, size],
-    ([latestOpacity, latestSize]) => {
+    ([latestOpacity, latestSize]: [number, number]) => {
       // Using primary color from theme - adjusting for dark mode primary
       // Primary in dark mode is typically a lighter color, using hsl or oklch equivalent
       return `radial-gradient(ellipse ${latestSize}% 60% at 50% -10%, rgba(147, 197, 253, ${latestOpacity * 0.6}), transparent 80%)`;
