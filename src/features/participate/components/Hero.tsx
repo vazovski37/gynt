@@ -17,7 +17,7 @@ export default function Hero() {
     <section className="relative py-32 pt-32 pb-20 flex items-center justify-center text-center overflow-hidden">
       <GridBackground />
       <HeroGlow />
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,15 +40,15 @@ export default function Hero() {
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6">
           {t('hero.title')}
         </h1>
-        
+
         <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10">
           {t('hero.subtitle')}
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button 
-            size="lg" 
-            onClick={() => router.push(navRoutes.schoolRegistration)}
+          <Button
+            size="lg"
+            onClick={() => window.open('https://forms.gle/qXrzRmsfKZ4WbgLC8', '_blank')}
             className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all group"
           >
             {t('hero.button')}
