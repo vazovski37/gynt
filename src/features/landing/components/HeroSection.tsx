@@ -11,20 +11,20 @@ import { AnimatedHeroBackground } from '@/components/landing/AnimatedHeroBackgro
 import { Sparkles, FlaskConical, BrainCircuit, Trophy, Microscope, Zap, UsersRound, Rocket } from 'lucide-react'
 
 // Animation variants
-const containerVariants = { 
-  hidden: { opacity: 0 }, 
-  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.5 } } 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.5 } }
 }
-const itemVariants = { 
-  hidden: { y: 20, opacity: 0 }, 
-  visible: { y: 0, opacity: 1, transition: { duration: 0.6 } } 
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
 }
-const headlineVariants = { 
-  visible: { transition: { staggerChildren: 0.05 } } 
+const headlineVariants = {
+  visible: { transition: { staggerChildren: 0.05 } }
 }
-const wordVariants = { 
-  hidden: { y: 20, opacity: 0 }, 
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } } 
+const wordVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
 }
 
 export function HeroSection() {
@@ -40,7 +40,7 @@ export function HeroSection() {
       <GridBackground />
       <HeroGlow />
       <AnimatedHeroBackground />
-      
+
       <motion.div
         className="z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
         variants={containerVariants}
@@ -54,16 +54,16 @@ export function HeroSection() {
             {t('hero.badge', { defaultValue: 'success' })}
           </span>
         </motion.p>
-        
+
         <motion.div variants={itemVariants} className="mt-4">
-          <motion.h1 
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground" 
+          <motion.h1
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-foreground"
             variants={headlineVariants}
           >
             {headlineLine1.map((word, index) => (
-              <motion.span 
-                key={index} 
-                variants={wordVariants} 
+              <motion.span
+                key={index}
+                variants={wordVariants}
                 className="inline-block mr-3 md:mr-4"
               >
                 {word}
@@ -72,9 +72,9 @@ export function HeroSection() {
             <br />
             <span className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-muted-foreground">
               {headlineLine2.map((word, index) => (
-                <motion.span 
-                  key={index} 
-                  variants={wordVariants} 
+                <motion.span
+                  key={index}
+                  variants={wordVariants}
                   className="inline-block mr-2.5 md:mr-3"
                 >
                   {word}
@@ -85,20 +85,20 @@ export function HeroSection() {
         </motion.div>
 
         {/* Feature Snippets */}
-        <motion.div 
-          variants={itemVariants} 
+        <motion.div
+          variants={itemVariants}
           className="mt-8 flex flex-wrap justify-center items-center gap-4 text-sm text-muted-foreground"
         >
           <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
-            <Microscope size={16} className="text-primary/70" /> 
+            <Microscope size={16} className="text-primary/70" />
             {t('hero.feature1', { defaultValue: 'Real Research' })}
           </span>
           <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
-            <BrainCircuit size={16} className="text-primary/70" /> 
+            <BrainCircuit size={16} className="text-primary/70" />
             {t('hero.feature2', { defaultValue: 'Scientific Debate' })}
           </span>
           <span className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 rounded-full backdrop-blur-sm">
-            <Trophy size={16} className="text-primary/70" /> 
+            <Trophy size={16} className="text-primary/70" />
             {t('hero.feature3', { defaultValue: 'National Recognition' })}
           </span>
         </motion.div>
@@ -108,7 +108,7 @@ export function HeroSection() {
           <Button
             size="lg"
             className="text-lg px-8 py-6 shadow-xl hover:shadow-2xl transition-all group"
-            onClick={() => router.push(navRoutes.teamRegistration)}
+            onClick={() => window.open('https://forms.gle/qXrzRmsfKZ4WbgLC8', '_blank')}
           >
             {t('hero.register')}
             <Zap className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -124,8 +124,8 @@ export function HeroSection() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div 
-          variants={itemVariants} 
+        <motion.div
+          variants={itemVariants}
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
         >
           {[
@@ -136,8 +136,8 @@ export function HeroSection() {
           ].map((stat, idx) => {
             const Icon = stat.icon
             return (
-              <motion.div 
-                key={idx} 
+              <motion.div
+                key={idx}
                 className="text-center"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}

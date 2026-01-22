@@ -17,6 +17,8 @@ import enCommon from "./languages/en/common.json"
 import geCommon from "./languages/ge/common.json"
 import enParticipate from "./languages/en/participate.json"
 import geParticipate from "./languages/ge/participate.json"
+import enAbout from "./languages/en/about.json"
+import geAbout from "./languages/ge/about.json"
 
 // Safe language fallback (default to 'ge')
 const savedLang = typeof window !== 'undefined' ? localStorage.getItem("la") || "ge" : "ge"
@@ -32,6 +34,7 @@ i18n
         schoolRegistration: enSchoolRegistration,
         participate: enParticipate,
         common: enCommon,
+        about: enAbout,
       },
       ge: {
         landing: geLanding,
@@ -40,11 +43,12 @@ i18n
         schoolRegistration: geSchoolRegistration,
         participate: geParticipate,
         common: geCommon,
+        about: geAbout,
       },
     },
     lng: savedLang,
     fallbackLng: "ge",
-    ns: ["landing", "navbar", "teamRegistration", "schoolRegistration", "participate", "common"],
+    ns: ["landing", "navbar", "teamRegistration", "schoolRegistration", "participate", "common", "about"],
     defaultNS: "landing",
     interpolation: {
       escapeValue: false,

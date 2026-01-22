@@ -1,0 +1,24 @@
+{
+    "title": "About Us",
+    "whoWeAre": {
+        "title": "Who Are We?",
+        "content": "The tournament is organized by **Ilia Vekua Physics-Mathematics Tbilisi Public School No. 42**. Our team has been working for years on popularizing natural sciences in Georgia and discovering talented youth."
+    },
+    "ourMission": {
+        "title": "Our Mission",
+        "content": "The International Young Naturalists' Tournament (IYNT) is not just a competition. It is a platform that helps students:",
+        "list": [
+            "Develop critical and analytical thinking;",
+            "Master experimental research methods;",
+            "Learn teamwork and defend their ideas in scientific discussions."
+        ]
+    },
+    "whatWeDo": {
+        "title": "What We Do?",
+        "content": "We create an environment where physics, chemistry, and biology move from textbooks to real laboratories. Our goal is to popularize natural science subjects in Georgia. Through qualifying competitions, the **Georgian National Team** will be formed, which will worthily represent our country on the international arena."
+    },
+    "whyIYNT": {
+        "title": "Why IYNT?",
+        "content": "This format differs from Olympiads. Here, the main focus is on the **process of discovery**. Participants take on the roles of reporter, opponent, and reviewer, preparing them for the real scientific world."
+    }
+}

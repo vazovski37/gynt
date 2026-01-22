@@ -77,7 +77,7 @@ export function WhyJoinGynt() {
         <Button
           size="lg"
           className="px-8 py-6 text-lg shadow-xl hover:shadow-2xl group"
-          onClick={() => router.push(navRoutes.teamRegistration)}
+          onClick={() => window.open('https://forms.gle/qXrzRmsfKZ4WbgLC8', '_blank')}
         >
           {t('whyJoin.cta')}
           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
