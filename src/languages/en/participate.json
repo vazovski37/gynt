@@ -9,26 +9,75 @@
   "whoCan": {
     "title": "Who Can Participate?",
     "rules": [
-      "Students under 17 years old (as of January 1, 2026)",
-      "Must be enrolled in a public or private school in Georgia",
-      "Each school may register 1 team of 6 students",
-      "Each team must have 1–2 team leaders and a team captain"
+      {
+        "label": "Age",
+        "text": "Under 17 years old (born on or after January 1, 2009)."
+      },
+      {
+        "label": "Team",
+        "text": "6 members (students from public or private schools)."
+      },
+      {
+        "label": "Leadership",
+        "text": "Each team has 1 or 2 leaders and a captain."
+      }
     ]
   },
   "format": {
-    "title": "Tournament Format",
-    "prep": "Preparation Phase",
-    "prepDesc": "Now – May 9, 2025\nTeams prepare solutions to 17 science problems with guidance from mentors.",
-    "fight": "Competition Phase",
-    "fightDesc": "May 10–12, 2025\nTeams compete in Science Fights with roles like Presenter, Opponent, Reviewer."
-  },
-  "dates": {
-    "title": "Important Dates",
-    "list": [
-      { "date": "April 25, 2025", "event": "Registration deadline" },
-      { "date": "May 10–12, 2025", "event": "GYNT 2025 Tournament (TBD location)" },
-      { "date": "May 13, 2025", "event": "Award ceremony and national team selection" }
+    "badge": "Science Battles",
+    "title": "Tournament Format (Science Battles)",
+    "subtitle": "The tournament runs in 6 rounds. At each stage, teams take on the roles of:",
+    "roles": [
+      {
+        "role": "Reporter",
+        "desc": "Presents the research results (8 min)."
+      },
+      {
+        "role": "Opponent",
+        "desc": "Criticizes the work and moderates the discussion (4 min)."
+      },
+      {
+        "role": "Reviewer",
+        "desc": "Evaluates the Reporter's and Opponent's performance (3 min)."
+      }
     ]
+  },
+  "problems": {
+    "title": "2026 Problems (Short List)",
+    "subtitle": "The tournament's 17 problems include diverse experiments. Full English version at [iynt.org](https://www.iynt.org/).",
+    "list": [
+      {
+        "title": "1. Singing Wine Glass",
+        "desc": "Study the sound produced by a wet cloth on a plastic glass."
+      },
+      {
+        "title": "2. Saliva",
+        "desc": "Starch breakdown into sugars and study of fermentative activity."
+      },
+      {
+        "title": "3. Blue Bottle",
+        "desc": "Analysis of methylene blue color change cycles."
+      },
+      {
+        "title": "7. Thermos",
+        "desc": "Experimentally determine the rate and efficiency of water cooling."
+      },
+      {
+        "title": "11. Hair Drying",
+        "desc": "Use a microscope to verify whether shampoo damages hair."
+      },
+      {
+        "title": "13–17. Invent",
+        "desc": "Create your own problems on mathematical art, archaeological seriation, and 'sixth sense'."
+      }
+    ]
+  },
+  "evaluation": {
+    "title": "Evaluation and National Team Selection",
+    "formula_desc": "Scores are calculated using a formula that considers both individual and team results.",
+    "formula": "Individual Score = (Report (30) + Opposition (20) + Review (10)) / 6",
+    "selection_title": "National Team Selection Round",
+    "selection_desc": "Takes place within 1 week after the tournament. Candidates must have two problems ready and be able to conduct the discussion in English."
   },
   "register": {
     "title": "Ready to Register?",
@@ -36,17 +85,27 @@
     "button": "Register Your School"
   },
   "contact": {
-    "title": "Contact",
-    "teimuraz": "Teimuraz Gachechiladze",
-    "giorgi": "Giorgi Bakhtadze"
+    "title": "Contact Information",
+    "organizer_label": "Organizer",
+    "organizer": "Ilia Vekua Physics-Mathematics Tbilisi Public School No. 42",
+    "people": [
+      {
+        "name": "Teimuraz Gachechiladze",
+        "phone": "+995 577 33 56 16"
+      },
+      {
+        "name": "Giorgi Bakhtadze",
+        "phone": "+995 557 73 22 28"
+      }
+    ]
   },
   "faq": {
-    "title": "FAQ",
+    "title": "Frequently Asked Questions",
     "q1": "Can students from different schools form a team?",
     "a1": "No, all team members must be from the same school.",
     "q2": "What is the age cut-off?",
     "a2": "Participants must be younger than 17 on January 1, 2026.",
     "q3": "Is participation free?",
-    "a3": "Yes, there is no participation fee."
+    "a3": "Yes, participation is completely free."
   }
 }

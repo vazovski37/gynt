@@ -2,16 +2,19 @@
 
 import { Research } from '../types/research'
 import ResearchCard from './ResearchCard'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   researches: Research[]
 }
 
 export default function ResearchList({ researches }: Props) {
+  const { t } = useTranslation('common')
+
   if (!researches.length) {
     return (
       <p className="text-muted-foreground text-sm text-center py-12">
-        No researches available.
+        {t('researches.noResearchesAvailable')}
       </p>
     )
   }

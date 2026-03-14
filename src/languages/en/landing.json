@@ -62,6 +62,9 @@
   },
   "timeline": {
     "title": "Timeline",
+    "subtitle": "Your journey from registration to victory",
+    "ctaLine1": "Ready to begin your journey?",
+    "ctaLine2": "Register your team today →",
     "registration": "Registration Opens",
     "problems": "Problems Released",
     "research": "Research Phase",

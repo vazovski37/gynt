@@ -126,8 +126,8 @@ export default function Navbar() {
               className="px-4 py-2 rounded-full bg-foreground border border-border text-sm font-medium text-background hover:bg-foreground/90 transition-all duration-200 flex items-center gap-2 hover:scale-105 active:scale-95 flex-shrink-0"
             >
               <Mail className="w-4 h-4 flex-shrink-0" />
-              <span className="hidden lg:inline whitespace-nowrap">info@gynt.ge</span>
-              <span className="lg:hidden whitespace-nowrap">Contact</span>
+              <span className="hidden lg:inline whitespace-nowrap">{t('contactEmail')}</span>
+              <span className="lg:hidden whitespace-nowrap">{t('contactButton')}</span>
             </Link>
           </div>
 
@@ -182,7 +182,7 @@ export default function Navbar() {
                   className="md:hidden w-9 h-9 text-foreground hover:bg-background/10 rounded-full transition-all duration-200"
                 >
                   <Menu className="w-5 h-5" />
-                  <span className="sr-only">Open mobile menu</span>
+                  <span className="sr-only">{t('openMenu')}</span>
                 </Button>
               </SheetTrigger>
               <SheetContent 

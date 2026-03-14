@@ -1,5 +1,20 @@
 {
     "title": "About Us",
+    "heroBadge": "International Young Naturalists' Tournament",
+    "roles": {
+        "reporter": {
+            "title": "Reporter",
+            "description": "Presents the solution to the problem and defends it in scientific discussion."
+        },
+        "opponent": {
+            "title": "Opponent",
+            "description": "Criticizes the Reporter, challenging the presentation and pointing out inaccuracies."
+        },
+        "reviewer": {
+            "title": "Reviewer",
+            "description": "Evaluates the performances of both Reporter and Opponent, summarizing the debate."
+        }
+    },
     "whoWeAre": {
         "title": "Who Are We?",
         "content": "The tournament is organized by **Ilia Vekua Physics-Mathematics Tbilisi Public School No. 42**. Our team has been working for years on popularizing natural sciences in Georgia and discovering talented youth."

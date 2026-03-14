@@ -52,7 +52,7 @@ export default function AboutPage() {
           <motion.div variants={fadeInUp} className="text-center space-y-6 max-w-4xl mx-auto pt-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium tracking-wide uppercase mb-4">
               <Atom className="w-4 h-4" />
-              <span>International Young Naturalists' Tournament</span>
+              <span>{t('heroBadge')}</span>
             </div>
 
             <h1 className="text-5xl sm:text-7xl encode-sans-expanded-black tracking-tight leading-[1.1]">
@@ -154,24 +154,24 @@ export default function AboutPage() {
             <div className="grid sm:grid-cols-3 gap-6">
               <RoleCard
                 icon={GraduationCap}
-                title="Reporter"
-                description="Presents the solution to the problem and defends it in scientific discussion."
+                title={t('roles.reporter.title')}
+                description={t('roles.reporter.description')}
                 color="text-emerald-500"
                 bg="bg-emerald-500/10"
                 border="border-emerald-500/20"
               />
               <RoleCard
                 icon={MessageSquare}
-                title="Opponent"
-                description="Criticizes the Reporter, challenging the presentation and pointing out inaccuracies."
+                title={t('roles.opponent.title')}
+                description={t('roles.opponent.description')}
                 color="text-amber-500"
                 bg="bg-amber-500/10"
                 border="border-amber-500/20"
               />
               <RoleCard
                 icon={Award}
-                title="Reviewer"
-                description="Evaluates the performances of both Reporter and Opponent, summarizing the debate."
+                title={t('roles.reviewer.title')}
+                description={t('roles.reviewer.description')}
                 color="text-purple-500"
                 bg="bg-purple-500/10"
                 border="border-purple-500/20"

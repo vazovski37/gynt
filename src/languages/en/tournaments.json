@@ -1,0 +1,8 @@
+{
+  "title": "Tournaments",
+  "subtitle": "Each year, GYNT brings together Georgia's brightest young scientists. Explore past editions, research problems, and winning solutions.",
+  "loading": "Loading tournaments...",
+  "error": "Failed to load tournaments.",
+  "noTournaments": "No tournaments available.",
+  "explore": "Explore {{year}}"
+}

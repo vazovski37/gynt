@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 import { Tournament } from '../types/tournament'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
-import { cn } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   tournament: Tournament
@@ -13,6 +13,7 @@ type Props = {
 
 export default function TournamentCard({ tournament }: Props) {
   const { year, edition, city, location } = tournament
+  const { t } = useTranslation('tournaments')
 
   return (
     <div className="p-6 border rounded-xl bg-background shadow-sm hover:shadow-md transition">
@@ -35,7 +36,7 @@ export default function TournamentCard({ tournament }: Props) {
 
         <Button variant="link" className="text-sm px-0" asChild>
           <Link href={`/tournaments/${year}`}>
-            Explore {year} <ArrowRight className="ml-1 w-4 h-4 inline" />
+            {t('explore', { year })} <ArrowRight className="ml-1 w-4 h-4 inline" />
           </Link>
         </Button>
       </div>

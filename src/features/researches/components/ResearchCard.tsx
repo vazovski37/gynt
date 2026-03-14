@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { ArrowRight, User, Calendar, Beaker } from 'lucide-react'
 import { Research } from '../types/research'
 import { cn } from '@/lib/utils'
@@ -13,6 +14,7 @@ type Props = {
 
 export default function ResearchCard({ research }: Props) {
   const { id, title, authors, tags, field, year } = research
+  const { t } = useTranslation('common')
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -33,7 +35,7 @@ export default function ResearchCard({ research }: Props) {
           <div className="mb-5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-primary/15 to-primary/5 text-primary border border-primary/20 group-hover:border-primary/40 transition-colors">
               <Beaker className="w-3.5 h-3.5" />
-              {field || 'Research'}
+              {field || t('researches.fieldFallback')}
             </span>
           </div>
 
@@ -48,7 +50,7 @@ export default function ResearchCard({ research }: Props) {
               <User className="w-4 h-4 text-primary flex-shrink-0" />
             </div>
             <span className="text-sm font-medium text-foreground line-clamp-1 flex-1">
-              {authors || 'Unknown'}
+              {authors || t('researches.unknown')}
             </span>
           </div>
 
@@ -81,7 +83,7 @@ export default function ResearchCard({ research }: Props) {
             )}
             <div className="flex items-center gap-2 ml-auto">
               <span className="text-xs font-semibold text-primary group-hover:translate-x-1 transition-transform inline-block">
-                Read More
+                {t('researches.readMore')}
               </span>
               <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-all" />
             </div>

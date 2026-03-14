@@ -2,16 +2,19 @@
 
 import TournamentCard from './TournamentCard'
 import { Tournament } from '../types/tournament'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   tournaments: Tournament[]
 }
 
 export default function TournamentList({ tournaments }: Props) {
+  const { t } = useTranslation('tournaments')
+
   if (!tournaments.length) {
     return (
       <p className="text-muted-foreground text-sm text-center">
-        No tournaments available.
+        {t('noTournaments')}
       </p>
     )
   }

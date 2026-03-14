@@ -73,7 +73,7 @@ export function TimelineSection() {
             {t('timeline.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your journey from registration to victory
+            {t('timeline.subtitle')}
           </p>
         </motion.div>
 
@@ -155,9 +155,9 @@ export function TimelineSection() {
           className="mt-16 text-center"
         >
           <p className="text-muted-foreground">
-            Ready to begin your journey?
+            {t('timeline.ctaLine1')}
             <span className="ml-2 text-primary font-semibold cursor-pointer hover:underline">
-              Register your team today →
+              {t('timeline.ctaLine2')}
             </span>
           </p>
         </motion.div>

@@ -19,9 +19,11 @@ import enParticipate from "./languages/en/participate.json"
 import geParticipate from "./languages/ge/participate.json"
 import enAbout from "./languages/en/about.json"
 import geAbout from "./languages/ge/about.json"
+import enTournaments from "./languages/en/tournaments.json"
+import geTournaments from "./languages/ge/tournaments.json"
 
 // Safe language fallback (default to 'ge')
-const savedLang = typeof window !== 'undefined' ? localStorage.getItem("la") || "ge" : "ge"
+const savedLang = typeof window !== 'undefined' ? localStorage.getItem("language") || "ge" : "ge"
 
 i18n
   .use(initReactI18next)
@@ -35,6 +37,7 @@ i18n
         participate: enParticipate,
         common: enCommon,
         about: enAbout,
+        tournaments: enTournaments,
       },
       ge: {
         landing: geLanding,
@@ -44,11 +47,12 @@ i18n
         participate: geParticipate,
         common: geCommon,
         about: geAbout,
+        tournaments: geTournaments,
       },
     },
     lng: savedLang,
     fallbackLng: "ge",
-    ns: ["landing", "navbar", "teamRegistration", "schoolRegistration", "participate", "common", "about"],
+    ns: ["landing", "navbar", "teamRegistration", "schoolRegistration", "participate", "common", "about", "tournaments"],
     defaultNS: "landing",
     interpolation: {
       escapeValue: false,

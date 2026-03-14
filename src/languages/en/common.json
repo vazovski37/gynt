@@ -24,7 +24,11 @@
     "of": "of",
     "noResults": "No results found",
     "noResultsDesc": "Try adjusting your search terms or filters to find what you're looking for.",
-    "clearSearch": "Clear search"
+    "clearSearch": "Clear search",
+    "readMore": "Read More",
+    "unknown": "Unknown",
+    "fieldFallback": "Research",
+    "noResearchesAvailable": "No researches available."
   },
   "schools": {
     "title": "Participating Schools",
